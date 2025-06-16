@@ -12,7 +12,9 @@
 
 # === IDEs ===
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/settings.json
+
 
 # IntelliJ IDEA
 .idea/
