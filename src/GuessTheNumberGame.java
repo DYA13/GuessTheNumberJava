@@ -37,13 +37,9 @@ public class GuessTheNumberGame {
         System.out.println("2- Medium(numbers from 1 to 50)");
         System.out.println("3- Hard(numbers from 1 to 100)");
 
-        int difficulty = scanner.nextInt();
-        while (difficulty < 1 || difficulty > 3) {
-            System.out.println(" Please enter the level 1,2 or 3");
-            difficulty = scanner.nextInt();
-        }
 
-        return difficulty;
+
+        return getValidatedInt(scanner, 1, 3);
     }
 
     public static void playGame(Scanner scanner, int maxNumber, int maxAttempts) {
@@ -51,9 +47,9 @@ public class GuessTheNumberGame {
         int target = random.nextInt(maxNumber) + 1;
         int previousGuess = -1;
         for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-            System.out.println("Attempt " + attempt + "from" + maxAttempts
-                    + "Enter the number from 1 to" + maxNumber + " :");
-            int guess = scanner.nextInt();
+            System.out.println("Attempt " + attempt + " of " + maxAttempts
+                    + ". Enter a number from 1 to " + maxNumber + ":");
+            int guess = getValidatedInt(scanner, 1, maxNumber);
 
             if (guess == target) {
                 System.out.println(
@@ -68,9 +64,9 @@ public class GuessTheNumberGame {
         System.out.println("Unfortunatly , you have lost! The number was " + target);
     }
 
-    public static void giveHint(int guess, int target, int prevoiusGuess) {
+    public static void giveHint(int guess, int target, int previousGuess) {
         int distance = Math.abs(guess - target);
-        if (prevoiusGuess == -1) {
+        if (previousGuess == -1) {
             if (distance >= 50)
                 System.out.println("Freezing ❄️");
             else if (distance >= 30)
@@ -88,7 +84,7 @@ public class GuessTheNumberGame {
             else
                 System.out.println("Sizzling! You're right next to it! 🔥🔥🔥");
         } else {
-            int prevoiusDistance = Math.abs(prevoiusGuess - target);
+            int prevoiusDistance = Math.abs(previousGuess - target);
             if (distance < prevoiusDistance) {
                 System.out.println("Warmer 🌡️");
             } else if (distance > prevoiusDistance) {
@@ -100,8 +96,38 @@ public class GuessTheNumberGame {
     }
 
     public static boolean askToPlayAgain(Scanner scanner) {
+        scanner.nextLine();
         System.out.println("Would you like to play again?(yes/no)");
-        String response = scanner.nextLine().toLowerCase();
-        return response.equals("yes") || response.equals("y");
+        while (true) {
+            String response = scanner.nextLine().toLowerCase();
+            if (response.equals("yes") || response.equals("y")) {
+                return true;
+            } else if (response.equals("no") || response.equals("n")) {
+                return false;
+            } else {
+                System.out.println("Please enter 'yes' or 'no'");
+            }
+        }
+
     }
+
+    public static int getValidatedInt(Scanner scanner, int min, int max) {
+        while (true) {
+            if (scanner.hasNextInt()) {
+                int number = scanner.nextInt();
+                if (number >= min && number <= max) {
+                    return number;
+                } else {
+                    System.out.println("Please enter a number between " + min + " and " + max);
+                }
+
+            } else {
+                System.out.println("Invalid input. Please enter a number!");
+                scanner.next();
+            }
+
+        }
+    }
+
+
 }
