@@ -24,7 +24,7 @@ public class GuessTheNumberGame {
                 maxAttempts = 10;
             }
             playGame(scanner, maxNumber, maxAttempts);
-            playAgain = askToPlayAgain();
+            playAgain = askToPlayAgain(scanner);
 
         } while (playAgain);
         System.out.println("Thank you for a game! Goodbye!");
@@ -49,7 +49,7 @@ public class GuessTheNumberGame {
     public static void playGame(Scanner scanner, int maxNumber, int maxAttempts) {
         Random random = new Random();
         int target = random.nextInt(maxNumber) + 1;
-        int prevoiusGuess = -1;
+        int previousGuess = -1;
         for (int attempt = 1; attempt <= maxAttempts; attempt++) {
             System.out.println("Attempt " + attempt + "from" + maxAttempts
                     + "Enter the number from 1 to" + maxNumber + " :");
@@ -61,8 +61,8 @@ public class GuessTheNumberGame {
 
                 return;
             } else {
-                giveHint(guess, target, prevoiusGuess);
-                prevoiusGuess = guess;
+                giveHint(guess, target, previousGuess);
+                previousGuess = guess;
             }
         }
         System.out.println("Unfortunatly , you have lost! The number was " + target);
@@ -100,7 +100,8 @@ public class GuessTheNumberGame {
     }
 
     public static boolean askToPlayAgain(Scanner scanner) {
-        return true;
-        // ask if user wants to play again
+        System.out.println("Would you like to play again?(yes/no)");
+        String response = scanner.nextLine().toLowerCase();
+        return response.equals("yes") || response.equals("y");
     }
 }
