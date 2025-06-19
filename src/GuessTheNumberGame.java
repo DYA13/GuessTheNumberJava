@@ -68,8 +68,35 @@ public class GuessTheNumberGame {
         System.out.println("Unfortunatly , you have lost! The number was " + target);
     }
 
-    public static void giveHint(int guess, int target) {
-        // Hint functionality caldo/freddo
+    public static void giveHint(int guess, int target, int prevoiusGuess) {
+        int distance = Math.abs(guess - target);
+        if (prevoiusGuess == -1) {
+            if (distance >= 50)
+                System.out.println("Freezing ❄️");
+            else if (distance >= 30)
+                System.out.println("Very Cold 🧊");
+            else if (distance >= 20)
+                System.out.println("Cold 🥶");
+            else if (distance >= 15)
+                System.out.println("Cool");
+            else if (distance >= 10)
+                System.out.println("Warm 🌡️");
+            else if (distance >= 5)
+                System.out.println("Hot 🔥");
+            else if (distance >= 2)
+                System.out.println("Very Hot🔥🔥");
+            else
+                System.out.println("Sizzling! You're right next to it! 🔥🔥🔥");
+        } else {
+            int prevoiusDistance = Math.abs(prevoiusGuess - target);
+            if (distance < prevoiusDistance) {
+                System.out.println("Warmer 🌡️");
+            } else if (distance > prevoiusDistance) {
+                System.out.println("Colder ❄️");
+            } else {
+                System.out.println("No changes");
+            }
+        }
     }
 
     public static boolean askToPlayAgain(Scanner scanner) {
