@@ -1,16 +1,10 @@
----
-
-## 🇮🇹 `README.it.md` (versione italiana)
-```markdown
-# 🎯 Gioco Indovina il Numero!
+# 🇮🇹 Gioco Indovina il Numero
 
 [🇬🇧 English](README.md) | [🇮🇹 Italiano](README.it.md)
 
 Un semplice gioco da terminale in Java, dove devi indovinare un numero segreto entro un numero limitato di tentativi.
 
 ---
-
-# 🎯 Gioco Indovina il Numero
 
 ## 🚀 Come Giocare
 
@@ -26,17 +20,14 @@ chmod +x run.sh     # solo la prima volta
 
 ## 📁 Struttura del progetto
 
-```bash
 .
 ├── run.sh
 ├── README.md
 ├── README.it.md
 ├── src/
-│   ├── Main.java
-│   └── engine/, logic/, model/, util/
-└── out/                     # cartella generata automaticamente
-
-
+│ ├── Main.java
+│ └── engine/, logic/, model/, util/
+└── out/ # cartella generata automaticamente
 
 💡 Funzionalità
 🔢 Tre livelli di difficoltà: Facile, Medio, Difficile
@@ -58,6 +49,3 @@ La documentazione è disponibile in:
 🇮🇹 Italiano
 
 🇬🇧 Inglese
-
-
-```
