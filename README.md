@@ -19,6 +19,8 @@ chmod +x run.sh     # only once
 ```
 
 📁 Project Structure
+
+```bash
 .
 ├── run.sh # Script to compile and run
 ├── README.md # English documentation
@@ -27,6 +29,7 @@ chmod +x run.sh     # only once
 │ ├── Main.java
 │ └── engine/, logic/, model/, util/
 └── out/ # auto-generated compiled classes
+```
 
 💡 Features
 🔢 Three difficulty levels: Easy, Medium, Hard

@@ -20,6 +20,7 @@ chmod +x run.sh     # solo la prima volta
 
 ## 📁 Struttura del progetto
 
+```bash
 .
 ├── run.sh
 ├── README.md
@@ -28,6 +29,8 @@ chmod +x run.sh     # solo la prima volta
 │ ├── Main.java
 │ └── engine/, logic/, model/, util/
 └── out/ # cartella generata automaticamente
+
+```
 
 💡 Funzionalità
 🔢 Tre livelli di difficoltà: Facile, Medio, Difficile
