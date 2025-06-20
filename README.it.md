@@ -14,8 +14,10 @@ Un semplice gioco da terminale in Java, dove devi indovinare un numero segreto e
 ### ▶️ Avvia il gioco
 
 ```bash
+
 chmod +x run.sh     # solo la prima volta
 ./run.sh
+
 ```
 
 ## 📁 Struttura del progetto
@@ -32,23 +34,33 @@ chmod +x run.sh     # solo la prima volta
 
 ```
 
-💡 Funzionalità
-🔢 Tre livelli di difficoltà: Facile, Medio, Difficile
+## 💡 Funzionalità
 
-🧠 Sistema dinamico di suggerimenti: "Caldo", "Freddo", "Più caldo", ecc.
+- 🔢 **Tre livelli di difficoltà**  
+  _Facile_, _Medio_, _Difficile_
 
-✅ Validazione dell’input e gestione errori
+- 🧠 **Sistema dinamico di suggerimenti**  
+  _"Caldo"_, _"Freddo"_, _"Più caldo"_.
 
-🔁 Possibilità di rigiocare senza riavviare
+- ✅ **Validazione dell’input e gestione degli errori**
 
-📦 Codice organizzato in moduli
+- 🔁 **Possibilità di rigiocare**  
+  Senza dover riavviare il programma
 
-✍️ Autore
-Creato con 💛 da Yelena
+- 📦 **Codice modulare**  
+  Organizzato in `engine`, `logic`, `model`, `util`
 
-🌍 Lingue
-La documentazione è disponibile in:
+---
 
-🇮🇹 Italiano
+### ✍️ Autore
 
-🇬🇧 Inglese
+Creato con 💛 da **Yelena**
+
+---
+
+### 🌍 Lingue
+
+Questa documentazione è disponibile in:
+
+- 🇮🇹 [Italiano](README.it.md)
+- 🇬🇧 [English](README.md)

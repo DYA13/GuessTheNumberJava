@@ -14,8 +14,10 @@ A simple terminal-based Java game where you try to guess a secret number within 
 ### ▶️ Run the game
 
 ```bash
+
 chmod +x run.sh     # only once
 ./run.sh
+
 ```
 
 📁 Project Structure
@@ -29,24 +31,36 @@ chmod +x run.sh     # only once
 │ ├── Main.java
 │ └── engine/, logic/, model/, util/
 └── out/ # auto-generated compiled classes
+
 ```
 
-💡 Features
-🔢 Three difficulty levels: Easy, Medium, Hard
+### 💡 Features
 
-🧠 Dynamic hint system: "Hot", "Cold", "Warmer", etc.
+- 🔢 **Three difficulty levels**  
+  _Easy_, _Medium_, _Hard_
 
-✅ Input validation and error handling
+- 🧠 **Dynamic hint system**  
+  _"Hot"_, _"Cold"_, _"Warmer"_, etc.
 
-🔁 Ability to replay without restarting the program
+- ✅ **Input validation and error handling**
 
-📦 Code organized into modules
+- 🔁 **Ability to replay**  
+  Play again without restarting the program
 
-✍️ Author
-Made with 💛 by Yelena
+- 📦 **Modular codebase**  
+  Organized into `engine`, `logic`, `model`, `util`
 
-🌍 Languages
+---
+
+### ✍️ Author
+
+Made with 💛 by **Yelena**
+
+---
+
+### 🌍 Languages
+
 This documentation is available in:
 
-🇬🇧 English
-🇮🇹 Italian
+- 🇬🇧 [English](README.md)
+- 🇮🇹 [Italiano](README.it.md)
