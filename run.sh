@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Очистить старые скомпилированные классы
-echo "🧹 Cleaning previous build..."
+# Pulizia dei file compilati precedenti
+echo "🧹 Pulizia della compilazione precedente..."
 rm -rf out
 mkdir out
 
-# Компиляция всех Java файлов в папке src/
-echo "⚙️ Compiling source files..."
+# Compilazione di tutti i file Java nella cartella src/
+echo "⚙️ Compilazione dei file sorgente..."
 if javac -d out $(find src -name "*.java"); then
-    echo "✅ Compilation successful"
+    echo "✅ Compilazione completata con successo"
 else
-    echo "❌ Compilation failed"
+    echo "❌ Compilazione fallita"
     exit 1
 fi
 
-# Запуск главного класса
-echo "🚀 Running the game..."
+# Avvio del gioco
+echo "🚀 Avvio del gioco..."
 java -cp out Main
