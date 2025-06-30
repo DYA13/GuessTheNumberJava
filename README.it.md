@@ -2,7 +2,7 @@
 
 [🇬🇧 English](README.md) | [🇮🇹 Italiano](README.it.md)
 
-Un semplice gioco da terminale in Java, dove devi indovinare un numero segreto entro un numero limitato di tentativi.
+Un gioco da terminale in Java, dove devi indovinare un numero segreto entro un numero limitato di tentativi.
 
 ---
 
