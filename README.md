@@ -2,7 +2,7 @@
 
 [🇬🇧 English](README.md) | [🇮🇹 Italiano](README.it.md)
 
-A simple terminal-based Java game where you try to guess a secret number within a limited number of attempts.
+A terminal-based Java game where you try to guess a secret number within a limited number of attempts.
 
 ---
 
